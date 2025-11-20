@@ -1,14 +1,112 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laboratorio 3 - PUCE Banco</title>
 </head>
+<style>
+    body {
+        background: rgb(51, 51, 51);
+        color: white;
+    }
+
+    input {
+        background: rgb(80, 79, 79);
+        border: rgba(247, 247, 247, 0.37) solid 1px;
+        border-radius: 4px;
+        color: rgb(255, 255, 255);
+    }
+    form {
+        background: rgb(44, 44, 44);
+        border: white solid 0.5px;
+        border-radius: 4px;
+    }
+    select {
+        background: gray;
+        color: white;
+    }
+
+    textarea {
+        background: gray;
+        color: white;
+        border: rgba(250, 250, 250, 0.452) solid 1px;
+        border-radius: 4px;
+    }
+
+    button {
+        background: gray;
+        color: white;
+    }
+    fieldset {
+        border: rgb(138, 138, 138) solid 1px;
+        border-radius: 4px;
+    }
+</style>
+
 <body>
     <h1>Laboratorio 3 - PUCE Banco</h1>
-    <p>Bienvenido al laboratorio 3 del curso de Desarrollo de Aplicaciones Web. En este laboratorio, implementaremos una aplicación web para un banco ficticio llamado PUCE Banco.</p>
-    <h2>Nombre del estudiante: [Tu Nombre Aquí]</h2>
+    <p>Bienvenido al laboratorio 3 del curso de Desarrollo de Aplicaciones Web. En este laboratorio, implementaremos una
+        aplicación web para un banco ficticio llamado PUCE Banco.</p>
+    <h2>Nombre del estudiante: Oliver Romo</h2>
     <!-- Aquí irá el formulario -->
+    <form action="#" method="post">
+        <div>
+            <label for="nombre">Nombre:</label>
+            <input id="nombre" name="nombre" type="text" placeholder="Nombre del cliente" required />
+        </div>
+        <div>
+            <label for="apellidoPaterno">Apellido Paterno:</label>
+            <input id="apellidoPaterno" name="apellidoPaterno" type="text" placeholder="Apellido paterno del cliente"
+                required />
+        </div>
+        <div>
+            <label for="apellidoMaterno">Apellido Materno:</label>
+            <input id="apellidoMaterno" name="apellidoMaterno" type="text" placeholder="Apellido materno del cliente"
+                required />
+        </div>
+        <div>
+            <label for="cedula">Número de cédula:</label>
+            <input id="cedula" name="cedula" type="text" placeholder="Número de cédula del cliente" required />
+        </div>
+        <div>
+            <label for="motivo">Motivo de apertura de cuenta:</label><br />
+            <textarea id="motivo" name="motivo" rows="4" cols="40"
+                placeholder="Motivo de apertura de cuenta del cliente" required></textarea>
+        </div>
+        <div>
+            <label for="tipoCuenta">Tipo de cuenta:</label>
+            <select id="tipoCuenta" name="tipoCuenta" required>
+                <option value="">-- Selecciona una opción --</option>
+                <option value="Ahorros">Ahorros</option>
+                <option value="Corriente">Corriente</option>
+            </select>
+        </div>
+        <div>
+            <fieldset>
+                <legend>Dirección de domicilio</legend>
+                <label for="calle">Calle:</label>
+                <input id="calle" name="calle" type="text" placeholder="Calle del domicilio del cliente" required />
+                <br /><br />
+
+                <label for="numero">Número:</label>
+                <input id="numero" name="numero" type="text" placeholder="Número del domicilio del cliente" required />
+                <br /><br />
+
+                <label for="interseccion">Intersección:</label>
+                <input id="interseccion" name="interseccion" type="text"
+                    placeholder="Intersección del domicilio del cliente" required />
+            </fieldset>
+        </div>
+        <div>
+            <label for="foto">Cargar foto:</label>
+            <input id="foto" name="foto" type="file" accept="image/*" />
+        </div>
+        <div>
+            <button type="submit">Confirmar</button>
+        </div>
+    </form>
 </body>
+
 </html>
